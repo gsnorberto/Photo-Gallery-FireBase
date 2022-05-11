@@ -4,7 +4,7 @@ export const Container = styled.div`
     background-color: #27282f;
     color: #FFFFFF;
     min-height: 100vh;
-`;
+`
 
 export const Area = styled.div`
     margin: auto;
@@ -17,4 +17,18 @@ export const Header = styled.h1`
     padding: 0;
     text-align: center;
     margin-bottom: 30px;
+`
+
+export const ScreenWarning = styled.div`
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+`
+
+export const PhotoList = styled.div`
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 `
