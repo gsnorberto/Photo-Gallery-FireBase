@@ -54,3 +54,7 @@ export const UploadForm = styled.form`
         }
     }
 `
+
+export const Button = styled.button`
+
+`;
