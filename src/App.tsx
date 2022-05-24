@@ -49,7 +49,7 @@ const App = () => {
 
     //Change page theme
     const handleToggleTheme = () => {
-        if(state.status === 'light'){
+        if (state.status === 'light') {
             setState({
                 ...state,
                 status: 'dark'
@@ -63,11 +63,13 @@ const App = () => {
     }
 
     return (
-        <C.Container>
+        <C.Container theme={state.status}>
             <C.Area>
-                <C.Header>Galeria de fotos</C.Header>
-                {/* <C.Header>{state.status}</C.Header>
-                <C.Button onClick={handleToggleTheme}>Mudar Tema</C.Button> */}
+                <C.ThemeArea>
+                    <C.Button onClick={handleToggleTheme}>Mudar Tema</C.Button>
+                </C.ThemeArea>
+
+                <C.Header theme={state.status}>Galeria de fotos</C.Header>
 
                 <C.UploadForm method="POST" onSubmit={handleFormSubmit}>
                     <input type="file" name='image' />

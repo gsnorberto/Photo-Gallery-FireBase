@@ -1,9 +1,15 @@
 import styled from "styled-components";
 
+
+
 export const Container = styled.div`
-    background-color: #27282f;
+    background-color: ${props => props.theme === 'light' ? '#FFFFFF' : '#27282f'};
     color: #FFFFFF;
     min-height: 100vh;
+
+    &:header{
+        
+    }
 `
 
 export const Area = styled.div`
@@ -13,6 +19,7 @@ export const Area = styled.div`
 `
 
 export const Header = styled.h1`
+    color: ${props => props.theme === 'light' ? '#000000' : '#FFFFFF'};
     margin: 0;
     padding: 0;
     text-align: center;
@@ -56,5 +63,10 @@ export const UploadForm = styled.form`
 `
 
 export const Button = styled.button`
+    width: 100px;
+`;
 
+export const ThemeArea = styled.div`
+    display: flex;
+    justify-content: flex-end;
 `;
